@@ -30,7 +30,7 @@ fakeDatabase = {
 }
 
 
-@app.get("/item")
+@app.get("/")
 def getItems(session: Session = Depends(get_session)):
     items = session.query(models.Item).all()
     return items
